@@ -13,13 +13,20 @@ let transportation = ["Truck", "Plane", "Helicopter", "Bus", "Horse"];
 let entertainment = ["Movie", "Bowling", "Bar", "Baseball Game", "Dancing"];
 
 let yourDestination = randomString(destination);
-console.log(yourDestination);
+let choose = window.confirm("Do you want to go to " + yourDestination + "?")
+console.log(choose)
+
+while(choose === false){
+    let yourDestination = randomString(destination);
+    choose = window.confirm("Do you want to go to " + yourDestination + "?");
+}
+ console.log(yourDestination);
+
 let yourRestaurant = randomString(restaurant);
 console.log(yourRestaurant);
 let yourTransportation = randomString(transportation);
 console.log(yourTransportation);
 let yourEntertainment = randomString(entertainment);
 console.log(yourEntertainment);
-
 
 
