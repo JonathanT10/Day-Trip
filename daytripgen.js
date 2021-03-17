@@ -4,10 +4,10 @@ function randomString(theArray){
     return result;
 }
 function confirmRandom(string, array){
-    let choose = window.confirm("Do you want to go to " + string + "?")
+    let choose = window.confirm("Please confirm the option for your day trip by clicking OK, or cancel for another option: " + string)
 while(choose === false){
     string = randomString(array);
-    choose = window.confirm("Do you want to go to " + string + "?");
+    choose = window.confirm("Please confirm the option for your day trip by clicking OK, or cancel for another option: " + string);
 
 }return string;
 
@@ -37,7 +37,7 @@ let yourTransportation = randomString(transportation);
 let finalTransportation = confirmRandom(yourTransportation, transportation);
 let yourEntertainment = randomString(entertainment);
 let finalEntertainment = confirmRandom(yourEntertainment, entertainment);
-let confirmDayTrip = window.confirm("Please confirm your Day Trip to " + finalDestination + ". You will be arriving by " + finalTransportation + ". You will be eating dinner at " + finalRestaurant + ". The entertainment for the evening will be " + finalEntertainment + ".");
+let confirmDayTrip = window.confirm("Please confirm your Day Trip to " + finalDestination + ". You will be arriving by " + finalTransportation + ". You will be eating at " + finalRestaurant + ". The entertainment will be " + finalEntertainment + ".");
 
 while(confirmDayTrip === false){
     yourDestination = randomString(destination);
@@ -48,6 +48,6 @@ while(confirmDayTrip === false){
     finalTransportation = confirmRandom(yourTransportation, transportation);
     yourEntertainment = randomString(entertainment);
     finalEntertainment = confirmRandom(yourEntertainment, entertainment);
-    confirmDayTrip = window.confirm("Please confirm your Day Trip to " + finalDestination + ". You will be arriving by " + finalTransportation + ". You will be eating dinner at " + finalRestaurant + ". The entertainment for the evening will be " + finalEntertainment + ".");
+    confirmDayTrip = window.confirm("Please confirm your Day Trip to " + finalDestination + ". You will be arriving by " + finalTransportation + ". You will be eating at " + finalRestaurant + ". The entertainment will be " + finalEntertainment + ".");
 }
-console.log("Your destination is " + finalDestination + ". You will arrive by " + finalTransportation + ". You will be eating dinner at " + finalRestaurant + ". The evenings entertainment will be " + finalEntertainment + ".");
+console.log("Your destination is " + finalDestination + ". You will arrive by " + finalTransportation + ". You will be eating at " + finalRestaurant + ". The entertainment will be " + finalEntertainment + ".");
