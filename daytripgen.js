@@ -3,31 +3,19 @@ function randomString(theArray){
     result = theArray[Math.floor(Math.random()*theArray.length)];
     return result;
 }
+
 function confirmRandom(string, array){
     let choose = window.confirm("Please confirm the option for your day trip by clicking OK, or cancel for another option: " + string)
-while(choose === false){
-    string = randomString(array);
-    choose = window.confirm("Please confirm the option for your day trip by clicking OK, or cancel for another option: " + string);
-
-}return string;
-
+    while(choose === false){
+        string = randomString(array);
+        choose = window.confirm("Please confirm the option for your day trip by clicking OK, or cancel for another option: " + string);
+    }return string;
 }
-
 
 let destination = ["Dallas",  "Houston", "San Antonio", "South Padre Island", "Amarillo"];
 let restaurant = ["Texas Roadhouse", "Gloria's", "Olive Garden", "Snuffer's", "Primo's", "Pecan Lodge"];
 let transportation = ["Truck", "Plane", "Helicopter", "Bus", "Horse"];
 let entertainment = ["Movie", "Bowling", "Bar", "Baseball Game", "Dancing"];
-
-
-//let yourDestination = randomString(destination);
-//let choose = window.confirm("Do you want to go to " + yourDestination + "?");
-
-//while(choose === false){
-   // let yourDestination = randomString(destination);
-    //choose = window.confirm("Do you want to go to " + yourDestination + "?");
-//}
- //console.log(yourDestination);
 
 let yourDestination = randomString(destination);
 let finalDestination = confirmRandom(yourDestination, destination);
